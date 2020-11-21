@@ -21,18 +21,20 @@ class _RecuerdoPageState extends State<RecuerdoPage> {
 
   bool _guardando = false;
   PickedFile photo;
+  var title = 'Nuevo recuerdo';
 
   @override
   Widget build(BuildContext context) {
     final RecuerdoModel recData = ModalRoute.of(context).settings.arguments;
     if (recData != null) {
       recuerdo = recData;
+      title = 'Editar recuerdo';
     }
 
     return Scaffold(
         key: scaffoldKey,
         appBar: AppBar(
-          title: Text('Nuevo recuerdo'),
+          title: Text(title),
           actions: <Widget>[
             IconButton(icon: Icon(Icons.location_on), onPressed: _getUbicacion),
             IconButton(

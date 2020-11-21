@@ -95,9 +95,6 @@ class _HomePageState extends State<HomePage> {
             child: Column(
           children: [
             Container(
-                // boundaryMargin: EdgeInsets.all(20.0),
-                // minScale: 0.1,
-                // maxScale: 1.6,
                 child: (recuerdo.foto == null)
                     ? Container()
                     : FadeInImage(
